@@ -29,6 +29,8 @@ In summary - besides using the Datadog MCP Server unaddressed - using SKILLS ref
 
 How about maintainiung of this project? It should be designed to be easy such that as the Datadog Docs get updated, it would be updated whenver it is updated. Then do we have to fork the Datadog Github Docs repo github.com/DataDog/documentation/blob/master/content  or can I just setup another repo with a custom code to crawl the Datadog Github Doc repo regularly? I prefer forking it but how do we maintain a folder called skills with several subfolders of skill names each with a SKILL.md in it while referencing the the latest content in github.com/DataDog/documentation/blob/master/content? TODO: Research how to do this.
 
+![](SKILLvsMCPvsSUBAGENTvsSLASHCOMMAND.png)
+
 ## ChatGPT Writing: Maintenance Recommendation
 The maintenance goal is eventual consistency with Datadog documentation rather than strict real-time parity. SKILLS should live in a separate repository and rely on automation to track relevant upstream documentation, update curated content when changes occur, and preserve SKILLS-specific structure and annotations. Forking the Datadog documentation repository is unnecessary and would introduce avoidable maintenance overhead, whereas automated extraction or referencing provides better long-term sustainability.
 
