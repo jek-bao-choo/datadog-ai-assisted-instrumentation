@@ -32,6 +32,9 @@ How about maintainiung of this project? It should be designed to be easy such th
 ![](SKILLvsMCPvsSUBAGENTvsSLASHCOMMAND.png)
 Source courtesy: IndyDevDan
 
+![](MovingUpTheStack.png)
+Source courtesy: Anthropic employees' talk at DeepLearning.ai conference
+
 
 ## ChatGPT Writing: Maintenance Recommendation
 The maintenance goal is eventual consistency with Datadog documentation rather than strict real-time parity. SKILLS should live in a separate repository and rely on automation to track relevant upstream documentation, update curated content when changes occur, and preserve SKILLS-specific structure and annotations. Forking the Datadog documentation repository is unnecessary and would introduce avoidable maintenance overhead, whereas automated extraction or referencing provides better long-term sustainability.
@@ -41,6 +44,10 @@ SKILLS do not replace the Datadog Onboarding MCP Server but provide a developer-
 
 # ChatGPT Writing: Why SKILLS
 SKILLS are not an alternative documentation source but a curated and structured interface over existing Datadog documentation. They transform raw documentation into scoped, opinionated knowledge aligned with onboarding and instrumentation workflows. By filtering irrelevant content, stabilizing prompts, and structuring guidance around concrete tasks, SKILLS reduce hallucination risk, improve token efficiency, and increase accuracy. The core value lies in this transformation layer, rather than in the underlying documentation itself.
+
+# Other Reference
+![](MistralModelLandscape.png)
+Source courtesy: Mistral employee at DeepLearning.ai conference
 
 # My Writing: Project Objective
 The objective of this project is not to reinvent the wheel but to empower users to instrument Datadog agent and SDK onboarding easier and more approachable during PoC evaluations by providing AI-assisted instrumentation support through this project.
