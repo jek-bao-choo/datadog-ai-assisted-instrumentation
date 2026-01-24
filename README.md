@@ -36,7 +36,10 @@ Source courtesy: IndyDevDan
 Source courtesy: Anthropic employees' talk at DeepLearning.ai conference
 
 
-## ChatGPT Writing: Maintenance Recommendation
+# My Writing: What I found on the internet
+There are companies who test using AI to assist in instrumentation and [the result hasn't been good](https://quesma.com/blog/introducing-otel-bench/). So, I'm interested to see how this commercial business makes their [AI assisted OTel instrumentation work well](https://ollygarden.com/rose). 
+
+# ChatGPT Writing: Maintenance Recommendation
 The maintenance goal is eventual consistency with Datadog documentation rather than strict real-time parity. SKILLS should live in a separate repository and rely on automation to track relevant upstream documentation, update curated content when changes occur, and preserve SKILLS-specific structure and annotations. Forking the Datadog documentation repository is unnecessary and would introduce avoidable maintenance overhead, whereas automated extraction or referencing provides better long-term sustainability.
 
 # ChatGPT Writing: Why SKILLS Instead of the MCP Server
@@ -50,6 +53,6 @@ SKILLS are not an alternative documentation source but a curated and structured 
 Source courtesy: Mistral employee at DeepLearning.ai conference
 
 # My Writing: Project Objective
-The objective of this project is not to reinvent the wheel but to empower users to instrument Datadog agent and SDK onboarding easier and more approachable during PoC evaluations by providing AI-assisted instrumentation support through this project.
+The objective of this project is not to reinvent the wheel but to empower users to instrument Datadog agent and SDK onboarding easier and more approachable during PoC evaluations by providing a list of functional requirements (in the form of success criteria) for the AI-assisted instrumentation to support my work.
 
 
