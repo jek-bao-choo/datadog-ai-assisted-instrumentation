@@ -55,4 +55,43 @@ Source courtesy: Mistral employee at DeepLearning.ai conference
 # My Writing: Project Objective
 The objective of this project is not to reinvent the wheel but to empower users to instrument Datadog agent and SDK onboarding easier and more approachable during PoC evaluations by providing a list of functional requirements (in the form of success criteria) for the AI-assisted instrumentation to support my work.
 
+---
+
+# Project Components
+To achieve the goal with the current SOTA components I would need:
+1. Coding Agent CLI: OpenCode or Claude Code
+2. Small Language Model: llama.cpp with a local model from Unsloth recommendation; but start with a free online model first using OpenRouter
+3. Agents: < Reference Terminus Bench Agents work>
+4. Skills: Datadog Docs
+5. PoC Requirements
+
+# Start with Basic Test Driven Development
+## Infrastructure Monitoring Test Cases:
+1. Add Datadog Agent to a host
+    * It should be able to differentiate between Windows, Linux, and other OS.
+    * It should be able to differentiate between CentOS, RHEL, Ubuntu, and other distro.
+    * It should be able to differentiate between support and unsupported versions of distro.
+    * It should be able to use git state (regardless available or unavailable)  to track Datadog Agent right after installation.
+    * It should be able to perform custom config changes, check agent status is active (not error), and commit git changes locally.
+2. Add DDOT (with Datadog Agent) to a host
+    * Same as above
+3. (OPTIONAL) Add OTel Col (contrib) to a host 
+    * Same as above
+## Application Performance Monitoring Test Cases:
+1. Add Datadog Trace SDK to an application
+    * It should be able to differentiate between Java, .NET, and other programming languages. 
+    * It should be able to differentiate between support and unsupported versions of programming languages.
+    * It should be able to differentiate between Springboot, Nest.js, and other framework.
+    * It should be able to differentiate between support and unsupported versions of framework.
+    * It should be able to use git state (regardless available or unavailable) to track Datadog Trace SDK right after addition.
+    * It should be able to perform manual instrumentation, working status of application using README.md, and commit git changes locally.
+2. (OPTIONAl) Add OTel SDK to an application
+    * Same as above    
+## Real User Moniotoring Test Cases:
+1. Add Datadog Browser RUM SDK to an application
+    * Same as APM test cases
+# Progress to Advanced Test Drive Development
+1. Troubleshoot instrumentation failures
+2. Test with available PoC plans
+ 
 
