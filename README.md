@@ -65,19 +65,23 @@ To achieve the goal with the current SOTA components I would need:
 4. Skills: Datadog Docs
 5. PoC Requirements
 
-# Start with Basic Test Driven Development
-## Infrastructure Monitoring Test Cases:
+# I. Start with Basic Test Driven Development
+
+## A. Infrastructure Monitoring Test Cases:
 1. Add Datadog Agent to a host
     * It should be able to differentiate between Windows, Linux, and other OS.
     * It should be able to differentiate between CentOS, RHEL, Ubuntu, and other distro.
     * It should be able to differentiate between support and unsupported versions of distro.
     * It should be able to use git state (regardless available or unavailable)  to track Datadog Agent right after installation.
     * It should be able to perform custom config changes, check agent status is active (not error), and commit git changes locally.
+    * It should be able to ask for any additional information it requires to proceed further such as datadog api key if it was not provided
+    * It should be able to write each step it has taken to a markdown file.
 2. Add DDOT (with Datadog Agent) to a host
     * Same as above
 3. (OPTIONAL) Add OTel Col (contrib) to a host 
     * Same as above
-## Application Performance Monitoring Test Cases:
+
+## B. Application Performance Monitoring Test Cases:
 1. Add Datadog Trace SDK to an application
     * It should be able to differentiate between Java, .NET, and other programming languages. 
     * It should be able to differentiate between support and unsupported versions of programming languages.
@@ -85,13 +89,37 @@ To achieve the goal with the current SOTA components I would need:
     * It should be able to differentiate between support and unsupported versions of framework.
     * It should be able to use git state (regardless available or unavailable) to track Datadog Trace SDK right after addition.
     * It should be able to perform manual instrumentation, working status of application using README.md, and commit git changes locally.
+    * It should be able to ask for any additional information it requires to proceed further such as datadog api key if it was not provided
+    * It should be able to write each step it has taken to a markdown file.
 2. (OPTIONAl) Add OTel SDK to an application
     * Same as above    
-## Real User Moniotoring Test Cases:
+
+## C. Real User Moniotoring Test Cases:
 1. Add Datadog Browser RUM SDK to an application
     * Same as APM test cases
-# Progress to Advanced Test Drive Development
-1. Troubleshoot instrumentation failures
-2. Test with available PoC plans
- 
 
+# II. Progress to Intermediate Test Drive Development
+## A. Troubleshoot host instrumentation failures
+    * Send test metrics, traces, and logs from script to Datadog
+    * Send test metrics, traces and logs through Datadog Agent
+    * Send test metrics, traces and logs through DDOT (with Datadog Agent)
+    * (OPTIONAL) Send test metrics, traces, and logs through OTel Col (contrib)
+    * Ask for any additional information it requires to proceed further such as datadog api key if it was not provided
+    * Write each step it has taken to a markdown file.
+## B. Troubleshoot BE application instrumentation failures
+    * Send test metrics, traces, and logs from script to Datadog
+    * Send test metrics, traces, and logs from Datadog Trace SDK to Datadog Agent
+    * (OPTIONAL) Send test metrics, traces, and logs from OTel SDK to Datadog
+    * Ask for any additional information it requires to proceed further such as datadog api key if it was not provided
+    * Write each step it has taken to a markdown file.
+## C. Troubleshoot FE application instrumentation failures
+    * ...
+
+# III. Progress to Advanced Test Driven Development
+## A. PoC plans
+    * ...
+ 
+# Todo: Jek
+1. Spin up a EC2 Ubuntu, use OpenCode with GLM-5 or Kimi K2.5 (without instruct or thinking) models from OpenRouter, and start with Test Case IA1 with the following prompt: "Monitor this host with Datadog Agent"
+2. Evaluate the efficacy of the task such that it should ask or instruct me to add datadog api key
+3. If it works then evaluate with Test Case IA1 sub points sequentially then to IA2... IC1... IIA... IIC...
