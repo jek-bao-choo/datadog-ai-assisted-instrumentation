@@ -72,9 +72,12 @@ To achieve the goal with the current SOTA components I would need:
     * It should be able to differentiate between Windows, Linux, and other OS.
     * It should be able to differentiate between CentOS, RHEL, Ubuntu, and other distro.
     * It should be able to differentiate between support and unsupported versions of distro.
+    * It should be able to ask for any additional information it requires to proceed further such as datadog api key and site if it was not provided
+    * It should be able to install the latest or correct version of Datadog Agent according to the OS and distro as well as version
+    * It should be able to validate the datadog agent status and verify the datadog agent process is runnin
+    * It should be able to test Datadog API endpoint to verify if the host metrics are available to validate it instrumented correctly
     * It should be able to use git state (regardless available or unavailable)  to track Datadog Agent right after installation.
     * It should be able to perform custom config changes, check agent status is active (not error), and commit git changes locally.
-    * It should be able to ask for any additional information it requires to proceed further such as datadog api key if it was not provided
     * It should be able to write each step it has taken to a markdown file.
 2. Add DDOT (with Datadog Agent) to a host
     * Same as above
@@ -121,5 +124,17 @@ To achieve the goal with the current SOTA components I would need:
  
 # Todo: Jek
 1. Spin up a EC2 Ubuntu, use OpenCode with GLM-5 or Kimi K2.5 (without instruct or thinking) models from OpenRouter, and start with Test Case IA1 with the following prompt: "Monitor this host with Datadog Agent"
+    * x86 <> Ubuntu 24 <> OpenCode <> OpenRouter GLM-4.7-Flash
+        - It was able to check the OS Distribution
+        - It checked check if existing datadog config existed but I am not sure if it is useful step.
+        - It was able to ask me for my Datadog API Key but it didn't ask me for my Datadog Site.
+        - It was abled to install Datadog Agent but it installed an old version Datadog Agent v6. The latest is v7.
+        - But it is not sending telemetry to Datadog.
+        - After which, I asked it to troubleshoot and it went into recursive state of trying to troubleshoot. 
+        - XXX Failed
+    * x86 <> Ubuntu 24 <> Claude Code <> OpenRouter GLM-4.7-Flash
+        - Next up
+    * OpenCode <>
+    * Claude Code 
 2. Evaluate the efficacy of the task such that it should ask or instruct me to add datadog api key
 3. If it works then evaluate with Test Case IA1 sub points sequentially then to IA2... IC1... IIA... IIC...
