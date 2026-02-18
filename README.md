@@ -133,8 +133,10 @@ To achieve the goal with the current SOTA components I would need:
         - After which, I asked it to troubleshoot and it went into recursive state of trying to troubleshoot. 
         - XXX Failed
     * x86 <> Ubuntu 24 <> Claude Code <> OpenRouter GLM-4.7-Flash
+        - Note: Claude Code is just to benchmark not to be used ultimately because it is proprietary
         - Next up
-    * OpenCode <>
-    * Claude Code 
+    * x86 <> Ubuntu 24 <> Codex <> OpenRouter GLM-4.7-Flash 
+        - Note: Codex maybe open source. Also its installation is not native like Claude Code or OpenCode
+    * x86 <> Ubuntu 24 <> Gemini CLI <> OpenRouter GLM-4.7-Flash 
 2. Evaluate the efficacy of the task such that it should ask or instruct me to add datadog api key
 3. If it works then evaluate with Test Case IA1 sub points sequentially then to IA2... IC1... IIA... IIC...
