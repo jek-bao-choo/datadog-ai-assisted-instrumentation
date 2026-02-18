@@ -146,15 +146,33 @@ To achieve the goal with the current SOTA components I would need:
         - It was able to check the OS Distribution
         - It checked check if existing datadog config existed but I am not sure if it is useful step.
         - It was able to ask me for my Datadog API Key but it didn't ask me for my Datadog Site.
-        - It was abled to install Datadog Agent but it installed an old version Datadog Agent v6. The latest is v7.
+        - It was able to install Datadog Agent but it installed an old version Datadog Agent v6. The latest is v7.
         - But it is not sending telemetry to Datadog.
         - After which, I asked it to troubleshoot and it went into recursive state of trying to troubleshoot. 
-        - XXX Failed
+        - XXX FAILED
+        - Verdict: At least OpenCode (unlike Cladue Code) got Datadog Agent wrong version installed - can we make up for model's gap with SKILLS and AGENTS?
+    * x86 <> Ubuntu 24 <> OpenCode <> OpenRouter Claude Haiku 4.5 & Claude Sonnet 4.6 models
+        - Give it a try if time permits
     * x86 <> Ubuntu 24 <> Claude Code <> OpenRouter GLM-4.7-Flash
+        - It was able to check the OS Distribution
+        - It checked check if existing datadog config existed but I am not sure if it is useful step.
+        - It was able to ask me for my Datadog API Key but it didn't ask me for my Datadog Site.
+        - It tried to install Datadog Agent but ran into permission issue and recursive loops trying to solve something
+        - It was NOT able to install Datadog Agent
+        - It did NOT send telemetry to Datadog
+        - XXX FAILED
+        - Verdict: Claude Code is not as good as OpenCode when used with OpenRouter GLM-4.7-Flash. So, do NOT use Claude Code with non-Claude models.
+    * x86 <> Ubuntu 24 <> Claude Code <> OpenRouter Claude Haiku 4.5 & Claude Sonnet 4.6 models
         - Note: Claude Code is just to benchmark not to be used ultimately because it is proprietary
-        - Next up
+        - It was able to ask me for my Datadog Site and Datadog API Key
+        - It was able to check Datadog status agent
+        - It was able to install Datadog Agent the latest version v7.
+        - Outcome: Sending telemetry to Datadog
+        - VVV PASSED but it was using Claude Haiku 4.5 and Claude Sonnet 4.6 models. So not a clear comparison
+        - Verdict: Claude Code is designed to work with Claude models, period.
     * x86 <> Ubuntu 24 <> Codex <> OpenRouter GLM-4.7-Flash 
         - Note: Codex maybe open source. Also its installation is not native like Claude Code or OpenCode
+        - Next up
     * x86 <> Ubuntu 24 <> Gemini CLI <> OpenRouter GLM-4.7-Flash 
 2. Evaluate the efficacy of the task such that it should ask or instruct me to add datadog api key
 3. If it works then evaluate with Test Case IA1 sub points sequentially then to IA2... IC1... IIA... IIC...
