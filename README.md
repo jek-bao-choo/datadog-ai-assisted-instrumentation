@@ -57,6 +57,24 @@ The objective of this project is not to reinvent the wheel but to empower users 
 
 ---
 
+# Before 17 Feb 2026 Section
+
+# opencode-fork-noinstall script
+It should NOT have intrusive behaviors such as:
+
+1. Automatically modifies shell configs (~/.bashrc, ~/.zshrc) - writes to your files
+2. Fixed installation path (~/.opencode/bin) - no flexibility
+3. Creates directories without asking
+4. Version checking connects to GitHub API
+5. No dry-run mode - can't preview what it will do
+
+# Next
+Get prospect (or even friends) using it first. Start with a portable OpenCode or Claude Code without installation on Linux or Windows. Then add Datadog Onboarding MCP with commands and test its accuracy.
+
+---
+
+# After 17 Feb 2026 Section
+
 # Project Components
 To achieve the goal with the current SOTA components I would need:
 1. Coding Agent CLI: OpenCode or Claude Code
@@ -140,3 +158,4 @@ To achieve the goal with the current SOTA components I would need:
     * x86 <> Ubuntu 24 <> Gemini CLI <> OpenRouter GLM-4.7-Flash 
 2. Evaluate the efficacy of the task such that it should ask or instruct me to add datadog api key
 3. If it works then evaluate with Test Case IA1 sub points sequentially then to IA2... IC1... IIA... IIC...
+
