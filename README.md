@@ -175,9 +175,10 @@ To achieve the goal with the current SOTA components I would need:
         - Verdict: Claude Code is designed to work with Claude models, period.
     * x86 <> Ubuntu 24 <> Codex <> OpenRouter GLM-4.7-Flash 
         - Note: Codex maybe open source. Also its installation is not native like Claude Code or OpenCode
-        - Next up
+        - Next up ...
     * x86 <> Ubuntu 24 <> Gemini CLI <> OpenRouter GLM-4.7-Flash
         - ... 
-2. Evaluate the efficacy of the task such that it should ask or instruct me to add datadog api key
+2. Evaluate the efficacy of the task and arrive at a verdict
+    - 19 Feb 2026 Verdict: Next up ..., make GLM-4.7-Flash smarter by making up for the gap with SKILLS and CUSTOM AGENT for OpenCode. Why not use Claude Code because it stuck into loops compared to OpenCode when both used with GLM-4.7-flash. After making it smarter than move on to the next point below.
 3. If it works then evaluate with Test Case IA1 sub points sequentially then to IA2... IC1... IIA... IIC...
 
