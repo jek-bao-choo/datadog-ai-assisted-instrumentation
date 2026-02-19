@@ -92,9 +92,9 @@ To achieve the goal with the current SOTA components I would need:
     * It should be able to differentiate between support and unsupported versions of distro.
     * It should be able to ask for any additional information it requires to proceed further such as datadog api key and site if it was not provided
     * It should be able to install the latest or correct version of Datadog Agent according to the OS and distro as well as version
-    * It should be able to validate the datadog agent status and verify the datadog agent process is runnin
+    * It should be able to validate the datadog agent status and verify the datadog agent process is running
     * It should be able to test Datadog API endpoint to verify if the host metrics are available to validate it instrumented correctly
-    * It should be able to use git state (regardless available or unavailable)  to track Datadog Agent right after installation.
+    * It should be able to use git state (regardless available or unavailable) to track Datadog Agent right after installation.
     * It should be able to perform custom config changes, check agent status is active (not error), and commit git changes locally.
     * It should be able to write each step it has taken to a markdown file.
 2. Add DDOT (with Datadog Agent) to a host
@@ -151,8 +151,11 @@ To achieve the goal with the current SOTA components I would need:
         - After which, I asked it to troubleshoot and it went into recursive state of trying to troubleshoot. 
         - XXX FAILED
         - Verdict: At least OpenCode (unlike Cladue Code) got Datadog Agent wrong version installed - can we make up for model's gap with SKILLS and AGENTS?
-    * x86 <> Ubuntu 24 <> OpenCode <> OpenRouter Claude Haiku 4.5 & Claude Sonnet 4.6 models
-        - Give it a try if time permits
+    * x86 <> Ubuntu 24 <> OpenCode <> OpenRouter Claude Sonnet 4.6 models
+        - It was able to ask me for my Datadog API Key and for my Datadog Site.
+        - It was able to install Datadog Agent the latest v7.
+        - Outcome: Sending telemetry to Datadog
+        - VVV PASSED
     * x86 <> Ubuntu 24 <> Claude Code <> OpenRouter GLM-4.7-Flash
         - It was able to check the OS Distribution
         - It checked check if existing datadog config existed but I am not sure if it is useful step.
@@ -173,7 +176,8 @@ To achieve the goal with the current SOTA components I would need:
     * x86 <> Ubuntu 24 <> Codex <> OpenRouter GLM-4.7-Flash 
         - Note: Codex maybe open source. Also its installation is not native like Claude Code or OpenCode
         - Next up
-    * x86 <> Ubuntu 24 <> Gemini CLI <> OpenRouter GLM-4.7-Flash 
+    * x86 <> Ubuntu 24 <> Gemini CLI <> OpenRouter GLM-4.7-Flash
+        - ... 
 2. Evaluate the efficacy of the task such that it should ask or instruct me to add datadog api key
 3. If it works then evaluate with Test Case IA1 sub points sequentially then to IA2... IC1... IIA... IIC...
 
